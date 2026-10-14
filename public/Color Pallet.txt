@@ -1,0 +1,6 @@
+Light Yellow : #FBFADC
+Navy : #182842
+Light Pink : #DFADC6
+Blue : #345372
+Skin : #CB9688 
+Black : #02060F 

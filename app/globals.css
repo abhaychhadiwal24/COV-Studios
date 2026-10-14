@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* .hero-img {
+  background-image: url('/hero-section/intro_img_5.png'); 
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+} */
+
+.bg-grad {
+  background: linear-gradient(to bottom right, #DFADC6, #182842, #FBFADC);
+}
+
+.bg-grad-2 {
+  background: linear-gradient(to bottom left, #DFADC6, #182842, #FBFADC);
+}
+
+.text-grad {
+  background: linear-gradient(to bottom right, #345372, #FBFADC);
+  -webkit-background-clip: text; /* for WebKit browsers */
+  -webkit-text-fill-color: transparent; /* makes the text itself transparent */
+  background-clip: text; /* modern standard */
+  color: transparent; /* fallback */
+}
+
+.text-grad-2 {
+  background: linear-gradient(to bottom right, #DFADC6, #FBFADC);
+  -webkit-background-clip: text; /* for WebKit browsers */
+  -webkit-text-fill-color: transparent; /* makes the text itself transparent */
+  background-clip: text; /* modern standard */
+  color: transparent; /* fallback */
+}
+
+.text-grad-3 {
+  background: linear-gradient(to bottom right, #182842, #CB9688);
+  -webkit-background-clip: text; /* for WebKit browsers */
+  -webkit-text-fill-color: transparent; /* makes the text itself transparent */
+  background-clip: text; /* modern standard */
+  color: transparent; /* fallback */
+}
+
+*{
+    font-family: var(--font-inter), sans-serif;
+}
+
+
+/* Marquee container */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.marquee__inner {
+  display: flex;
+  width: max-content;
+  animation: scroll-left linear infinite;
+}
+
+.marquee__inner.reverse {
+  animation-name: scroll-right;
+}
+
+.marquee__item {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  border-radius: 12px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.marquee__item img {
+  border-radius: 12px;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+}
+
+/* Left scroll */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Right scroll */
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+:root {
+  --blur-amount: 0px; /* Default value */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* src/app/globals.css */
+
+/* Target the nav when it has the .navbar-light class */
+#main-nav.navbar-light {
+  color: black;
+}
+
+/* Add a smooth transition for the color change */
+#main-nav {
+  transition: color 0.3s ease-in-out;
+}
+
+/* src/app/globals.css */
+
+/* Add a transition to the base navbar for a smooth effect */
+#main-nav {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* This is the class that will be added on scroll */
+#main-nav.navbar-scrolled {
+  /* Semi-transparent dark background */
+  background-color: rgba(126, 124, 124, 0.5); 
+  
+  /* The "glass" effect */
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+
+  /* Optional: a subtle border to define the edge */
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1);  */
+}
+
+/* ... your other global styles ... */
